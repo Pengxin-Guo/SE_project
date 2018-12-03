@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* å…¨å±€èƒŒæ™¯æŽ§åˆ¶ */
+body { background:#fff; }  
+
+
+/* å…¨å±€å­—ä½“æŽ§åˆ¶ */
+body{ font:12px/1.2 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif; color:#454545; }
+a:focus{ outline:1px dotted; }
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+
+/* å…¨å±€é»˜è®¤é“¾æŽ¥ */
+a { color:#009; text-decoration:none; outline: none; }  /* é“¾æŽ¥é¢œè‰² */
+a:hover { color:#939; text-decoration:underline; }      /* é¼ æ ‡ç»è¿‡æ—¶çŠ¶æ€ */
+
+
+/* å…¨å±€å®½åº¦ */
+.nomalwidth { width:960px; }
