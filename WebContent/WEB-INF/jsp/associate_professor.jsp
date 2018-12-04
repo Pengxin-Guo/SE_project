@@ -162,11 +162,11 @@
 							<div class="menu_box">
 								<ul>
 								<!-- 输出二级栏目信息-->
-								<li><a href="professor" title="院系概况"><span>教授</span></a></li>
+								<li><a href="professor" title="教授"><span>教授</span></a></li>
 								<!-- 输出二级栏目信息-->
-								<li><a href="associate_professor" title="百年校庆"><span>副教授</span></a></li>
+								<li><a href="associate_professor" title="副教授"><span>副教授</span></a></li>
 								<!-- 输出二级栏目信息-->
-								<li><a href="lecturer" title="百年校庆"><span>讲师</span></a></li>
+								<li><a href="lecturer" title="讲师"><span>讲师</span></a></li>
 								</ul>
 							</div>
 						</div> <!-- end --> <!-- end --> <!-- start -->

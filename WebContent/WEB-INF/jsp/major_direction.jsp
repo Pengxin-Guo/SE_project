@@ -163,11 +163,11 @@
 								<ul>
 
 									<!-- 输出二级栏目信息-->
-									<li><a href="major_introduction" title="院系概况"><span>专业简介</span></a>
+									<li><a href="major_introduction" title="专业简介"><span>专业简介</span></a>
 										<ul>
 										</ul></li>
 									<!-- 输出二级栏目信息-->
-									<li><a href="major_direction" title="百年校庆"><span>培养方案</span></a>
+									<li><a href="major_direction" title="培养方案"><span>培养方案</span></a>
 								</ul>
 							</div>
 						</div> <!-- end --> <!-- end --> <!-- start -->
