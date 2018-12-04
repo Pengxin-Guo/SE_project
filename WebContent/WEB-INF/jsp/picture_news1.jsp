@@ -89,7 +89,7 @@
 					var ms = new mtDropDownSet(mtDropDown.direction.down, 0, 0, mtDropDown.reference.bottomLeft);
 					var menu4714 = ms.addMenu(document.getElementById("menu_4714"));
 					menu4714.addItem("专业简介", "major_introduction", "");
-					menu4714.addItem("方向简介", "major_direction", "");
+					menu4714.addItem("培养方案", "major_direction", "");
 					var menu4715 = ms.addMenu(document.getElementById("menu_4715"));
 					menu4715.addItem("教授", "professor", "");
 					var subMenu4715_0 = menu4715.addMenu(menu4715.items[0]);

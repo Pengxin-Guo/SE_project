@@ -94,7 +94,7 @@
 					var menu4714 = ms.addMenu(document
 							.getElementById("menu_4714"));
 					menu4714.addItem("专业简介", "major_introduction", "");
-					menu4714.addItem("方向简介", "major_direction", "");
+					menu4714.addItem("培养方案", "major_direction", "");
 					var menu4715 = ms.addMenu(document
 							.getElementById("menu_4715"));
 					menu4715.addItem("教授", "professor", "");
@@ -167,7 +167,7 @@
 										<ul>
 										</ul></li>
 									<!-- 输出二级栏目信息-->
-									<li><a href="major_direction" title="百年校庆"><span>方向简介</span></a>
+									<li><a href="major_direction" title="百年校庆"><span>培养方案</span></a>
 								</ul>
 							</div>
 						</div> <!-- end --> <!-- end --> <!-- start -->
