@@ -186,21 +186,21 @@
 								<li>&nbsp;<A href='index' class='navigation_style'>首页</a>&nbsp;&nbsp;&#8250;
 								</li>
 								<li>&nbsp;后台管理&nbsp;&nbsp;&#8250;</li>
-								<li>&nbsp;登录</li>
+								<li>&nbsp;添加新闻</li>
 							</ul>
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> 
 						<!-- start -->
 						<div style="height: 100px"></div>						
-						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">登录</h1>						
-					<form action="add_news_detail" method="post">
+						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">添加新闻</h1>						
+					<form action="add_news_achieve" method="post">
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">用户名：</td><td><input name="name" type="text"></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text"></td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">密码：</td><td><input name="password" type="password"></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="10" cols="22"></textarea></td></tr>
                     <tr><td>&nbsp;</td></tr>
                     <tr><td>&nbsp;</td></tr>
-                    <tr><td align="center"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">登录</button></td></tr>
+                    <tr><td align="center"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
                     </table>
              		</form>
              		</div>
