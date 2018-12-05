@@ -45,7 +45,7 @@ public class add_news_detailServlet extends HttpServlet implements Servlet {
 	    
 	    if (user.getName().equals(name) && user.getPassword().equals(password)) {
 			s1.setAttribute("key", "1");
-	    	request.getRequestDispatcher("/WEB-INF/jsp/add_news_detail.jsp").forward(request, response);
+			response.sendRedirect("add_news_detail");
 	    } else {
 			JOptionPane.showMessageDialog(null, "用户名或密码错误，请重新输入！"); 
 			s1.setAttribute("key", "2");
