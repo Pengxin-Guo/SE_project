@@ -22,7 +22,6 @@ public class add_newsServlet extends HttpServlet {
 			response.sendRedirect("add_news_detail");
 		} else {
 		    request.getRequestDispatcher("/WEB-INF/jsp/add_news.jsp").forward(request, response);
-		    //request.getRequestDispatcher("/WEB-INF/jsp/add_news.jsp").forward(request, response);
 		}
 	}
 }

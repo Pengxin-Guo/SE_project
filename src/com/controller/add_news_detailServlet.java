@@ -28,7 +28,6 @@ public class add_news_detailServlet extends HttpServlet implements Servlet {
 	    	request.getRequestDispatcher("/WEB-INF/jsp/add_news_detail.jsp").forward(request, response);
 		} else {
 			response.sendRedirect("add_news");
-		    //request.getRequestDispatcher("/WEB-INF/jsp/add_news.jsp").forward(request, response);
 		}
 	}
 
@@ -51,7 +50,6 @@ public class add_news_detailServlet extends HttpServlet implements Servlet {
 			JOptionPane.showMessageDialog(null, "用户名或密码错误，请重新输入！"); 
 			s1.setAttribute("key", "2");
 			response.sendRedirect("add_news");
-			//request.getRequestDispatcher("/WEB-INF/jsp/add_news.jsp").forward(request, response);
 	    }
 	}
 
