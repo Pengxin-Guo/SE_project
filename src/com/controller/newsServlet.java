@@ -7,15 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.service.ShowNewsService;
+
 /**
  * Servlet implementation class newsServlet
  */
 @WebServlet("/news")
 public class newsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    private ShowNewsService showNewsService = new ShowNewsService();
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	    request.setAttribute("newss", showNewsService.listNews());
 	    request.getRequestDispatcher("/WEB-INF/jsp/news.jsp").forward(request, response);
 	}
 }
