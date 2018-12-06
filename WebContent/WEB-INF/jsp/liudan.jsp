@@ -133,7 +133,7 @@
 				<li id="menu_4726"><a href="work_information"
 					style="color: #000000;">就业指南</a></li>
 				<li id="menu_4735"><a href="news" style="color: #000000;">新闻公告</a></li>
-				<li id="menu_8202" class="right"><a href="add_news"
+				<li id="menu_8202" class="right"><a href="backstage_management"
 					class="clear" style="color: #000000;">后台管理</a></li>
 			</ul>
 		</div>

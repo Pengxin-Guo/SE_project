@@ -7,6 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
 
+import javax.swing.JOptionPane;
+
 import com.entity.News;
 import com.util.DataSourceUtils;
 
@@ -20,11 +22,14 @@ public class AddNewsService {
 		        PreparedStatement st = conn.prepareStatement(sql)) {
 		        st.setString(1, news.getTitle());
 		        st.setString(2, news.getContent());
-		        st.setString(3, news.getContent());
+		        st.setString(3, news.getAuthor());
 		        st.setString(4, df.format(new Date()));
-		        st.executeUpdate();    
+		        st.executeUpdate(); 
+				JOptionPane.showMessageDialog(null, "添加新闻成功！"); 
+
 		    }catch (SQLException e) {
 		      // TODO: handle exception
+			  JOptionPane.showMessageDialog(null, "添加新闻失败："+e.getMessage()+"!"); 
 		      logger.warning(e.getMessage());
 		    }
 		  }

@@ -133,7 +133,7 @@
 				<li id="menu_4726"><a href="work_information"
 					style="color: #000000;">就业指南</a></li>
 				<li id="menu_4735"><a href="news" style="color: #000000;">新闻公告</a></li>
-				<li id="menu_8202" class="right"><a href="add_news"
+				<li id="menu_8202" class="right"><a href="backstage_management"
 					class="clear" style="color: #000000;">后台管理</a></li>
 			</ul>
 		</div>
@@ -186,25 +186,27 @@
 								<li>&nbsp;<A href='index' class='navigation_style'>首页</a>&nbsp;&nbsp;&#8250;
 								</li>
 								<li>&nbsp;后台管理&nbsp;&nbsp;&#8250;</li>
-								<li>&nbsp;登录</li>
+								<li>&nbsp;添加新闻</li>
 							</ul>
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> 
 						<!-- start -->
-						<div style="height: 100px"></div>						
-						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">登录</h1>						
-					<form action="add_news_detail" method="post">
+						<div style="height: 50px"></div>						
+						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">添加新闻</h1>						
+					<form action="add_news_achieve" method="post">
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">用户名：</td><td><input name="name" type="text"></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required"></td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">密码：</td><td><input name="password" type="password"></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="15" cols="42" required="required"></textarea></td></tr>
                     <tr><td>&nbsp;</td></tr>
-                    <tr><td>&nbsp;</td></tr>
-                    <tr><td align="center"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">登录</button></td></tr>
+                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"></td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;</td></tr>
+                    <tr><td align="right"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
                     </table>
              		</form>
              		</div>
-             		<div style="height: 150px"></div>
+             		<div style="height: 100px"></div>
              		
 					</td>
 				</tr>
