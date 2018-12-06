@@ -235,34 +235,12 @@
 						<span style="color: #000000;"> 专业动态 </span>
 					</h3>
 					<ul>
-					<c:forEach items="${newss }" var="news">
-      						<li><a href="GetUserServlet?uid=${news.id }">${news.title }</a></li>
+					<c:forEach items="${newss }" var="news" varStatus="s" >
+    						<c:if test="${s.count < 6 }">
+    					    <li style="color: #000000;"><a href="GetUserServlet?uid=${news.id }" title="${news.title }" style="color: #000000;">${news.title } </a><span>${news.time }</span></li>
+    						</c:if>
     				</c:forEach>
-						<li style="color: #000000;"><a
-							href="/publish/cs/4853/2018/20181123115143453714729/20181123115143453714729_.html"
-							title="有担当的计算机学者，有情怀的文人雅士" style="color: #000000;">有担当的计算机学者，有情怀的文人雅士</a></li>
-						<li style="color: #000000;"><a
-							href="/publish/cs/4853/2018/20181123111227888426151/20181123111227888426151_.html"
-							title="计算机系孙富春教授当选IEEE Follow" style="color: #000000;">计算机系孙富春教授当选IEEE
-								Follow</a></li>
-						<li style="color: #000000;"><a
-							href="/publish/cs/4853/2018/20181122143636291355673/20181122143636291355673_.html"
-							title="计算机系朱文武教授团队获NIPS 2018自动机器学习挑战赛亚军" style="color: #000000;">计算机系朱文武教授团队获NIPS
-								2018自动机器...</a></li>
-						<li style="color: #000000;"><a
-							href="/publish/cs/4853/2018/20181122092929868332169/20181122092929868332169_.html"
-							title="中国教育报头版头条报道清华计算机系：做计算机学科的国际领跑者" style="color: #000000;">中国教育报头版头条报道清华计算机系：做计算机学科的...</a></li>
-						<li style="color: #000000;"><a
-							href="/publish/cs/4853/2018/20181122083126691395097/20181122083126691395097_.html"
-							title="计算机系高性能所师生斩获SC18多项奖励" style="color: #000000;">计算机系高性能所师生斩获SC18多项奖励</a></li>
-						<li style="color: #000000;"><a
-							href="/publish/cs/4853/2018/20181119101656185994991/20181119101656185994991_.html"
-							title="国家重点研发计划“人机交互自然性的计算原理”项目在北京召开项目中期检查会"
-							style="color: #000000;">国家重点研发计划“人机交互自然性的计算原理”项目在...</a></li>
-						<li style="color: #000000;"><a
-							href="/publish/cs/4853/2018/20181116092317583540111/20181116092317583540111_.html"
-							title="大满贯！清华学生超算团队获得国际大学生超级计算机竞赛（SC18）总冠军"
-							style="color: #000000;">大满贯！清华学生超算团队获得国际大学生超级计算机竞...</a></li>
+						
 					</ul>
 				</div>
 				<!-- 院系要闻结束 -->
@@ -279,9 +257,7 @@
 						<span style="color: #000000;"> 学术报告</span>
 					</h3>
 					<p>
-						<a
-							href="/publish/cs/4852/2018/20181115091851965801723/20181115091851965801723_.html"
-							title=""> <script language="javascript"
+						<script language="javascript"
 								type="text/javascript">
 								//调用cutSummary截取简介中的前45个字符
 								cutSummary("", 45);
