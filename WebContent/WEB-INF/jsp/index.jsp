@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -233,6 +235,9 @@
 						<span style="color: #000000;"> 专业动态 </span>
 					</h3>
 					<ul>
+					<c:forEach items="${newss }" var="news">
+      						<li><a href="GetUserServlet?uid=${news.id }">${news.title }</a></li>
+    				</c:forEach>
 						<li style="color: #000000;"><a
 							href="/publish/cs/4853/2018/20181123115143453714729/20181123115143453714729_.html"
 							title="有担当的计算机学者，有情怀的文人雅士" style="color: #000000;">有担当的计算机学者，有情怀的文人雅士</a></li>
