@@ -190,21 +190,23 @@
 							</ul>
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> 
 						<!-- start -->
-						<div style="height: 100px"></div>						
+						<div style="height: 50px"></div>						
 						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">添加新闻</h1>						
 					<form action="add_news_achieve" method="post">
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text"></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required"></td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="10" cols="22"></textarea></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="15" cols="42" required="required"></textarea></td></tr>
                     <tr><td>&nbsp;</td></tr>
-                    <tr><td>&nbsp;</td></tr>
-                    <tr><td align="center"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
+                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"></td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;</td></tr>
+                    <tr><td align="right"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
                     </table>
              		</form>
              		</div>
-             		<div style="height: 150px"></div>
+             		<div style="height: 100px"></div>
              		
 					</td>
 				</tr>
