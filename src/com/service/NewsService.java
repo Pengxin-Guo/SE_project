@@ -19,8 +19,8 @@ import com.util.DataSourceUtils;
 public class NewsService {
 	private static Logger logger = Logger.getLogger("news");
 	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// 设置日期格式
+	
 	// 添加新闻
-
 	public void addNews(News news) {
 		// TODO Auto-generated method stub
 		String sql = "INSERT INTO news(title,content,author,time) VALUES(?,?,?,?)";
@@ -66,12 +66,13 @@ public class NewsService {
 	// 更新新闻
 	public void updateNews(News news) {
 		// TODO Auto-generated method stub
-		String sql = "UPDATE news SET title=?, content=?, author=? WHERE id=?";
+		String sql = "UPDATE news SET title=?, content=?, author=?, time=? WHERE id=?";
 		try (Connection conn = DataSourceUtils.getConnection(); PreparedStatement st = conn.prepareStatement(sql)) {
 			st.setString(1, news.getTitle());
 			st.setString(2, news.getContent());
 			st.setString(3, news.getAuthor());
-			st.setInt(4, news.getId());
+			st.setString(4, df.format(new Date()));
+			st.setInt(5, news.getId());
 			st.executeUpdate();
 			JOptionPane.showMessageDialog(null, "更新新闻成功！");
 		} catch (SQLException e) {

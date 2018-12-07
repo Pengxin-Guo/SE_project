@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -199,22 +201,15 @@
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> 
 						<!-- start -->
 						<div style="height: 50px"></div>						
-						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">删除新闻</h1>						
-					<form action="delete_news_achieve" method="post">
-                    <table style="margin: auto;margin-bottom: auto">
-                    <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required"></td></tr>
-					<tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="15" cols="42" required="required"></textarea></td></tr>
-                    <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"></td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;</td></tr>
-                    <tr><td align="right"><a href="backstage_management"><input type="button" value="取消"></a></td><td align="center"><button type="submit">删除</button></td></tr>
-                    </table>
-             		</form>
-             		</div>
-             		<div style="height: 100px"></div>
+						<h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">删除新闻</h1>						
+							<table style="margin: 0 auto; text-align: center"; >
+								<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td width="60px"><strong>新闻序号</strong></td><td width="300px"><strong>新闻标题</strong></td><td width="80px"><strong>发布时间</strong></td><td width="50px"><strong>操作</strong></td></tr>
+								<c:forEach items="${newss }" var="news" varStatus="s" >
+    					    		<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td >${news.id }</td><td align="left">${news.title }</td><td >${news.time }</td><td><a href="delete_news_achieve?id=${news.id }" style="display: inline-block;text-decoration: none;border-radius: 8px;color: red;">删除</a></td></tr>
+    							</c:forEach>
+							</table>
+							
+             			<div style="height: 100px"></div>
              		
 					</td>
 				</tr>
