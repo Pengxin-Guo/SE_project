@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,12 +28,13 @@
 	 *jQuery:所有外域链接在新窗口打开
 	 */
 	$(document).ready(
-			function() {
+			function() {				
 				$(
 						"a[href*='http://']:not([href*='" + location.hostname
 								+ "']),[href*='https://']:not([href*='"
 								+ location.hostname + "'])").addClass(
 						"external").attr("target", "_blank")
+				
 			});
 </script>
 <script src="resources/js/global.js"></script>
@@ -64,6 +67,8 @@
 	type="text/css" />
 <!-- 导入全局模板 -->
 <script src="resources/js/global_index.js"></script>
+
+
 </head>
 <body>
 	<!-- 整体区域开始 -->
@@ -203,6 +208,15 @@
 					<form action="modify_news_achieve" method="post">
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
+                    <tr style="align-content: center;"><td align="center">选择新闻：</td>
+                    <td><select name="id" style="width: 270px" id="sel">
+      						<c:forEach items="${newss }" var="news">
+        						<option value="${news.id }">${news.title }</option>
+     						</c:forEach>
+    					</select></td>
+    				</tr>
+                    
+                    <tr><td>&nbsp;</td></tr>
                     <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required"></td></tr>
 					<tr><td>&nbsp;</td></tr>
                     <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="15" cols="42" required="required"></textarea></td></tr>
@@ -210,7 +224,7 @@
                     <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"></td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr><td align="right"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
+                    <tr><td align="right"><a href="backstage_management"><input type="button" value="取消"></a></td><td align="center"><button type="submit">修改</button></td></tr>
                     </table>
              		</form>
              		</div>

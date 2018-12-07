@@ -18,8 +18,8 @@ import com.service.UserService;
 @WebServlet("/modify")
 public class modifyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	UserService userService = new UserService();
-  
+	private UserService userService = new UserService();
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession s1 = request.getSession();

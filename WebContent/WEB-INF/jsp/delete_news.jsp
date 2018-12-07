@@ -210,7 +210,7 @@
                     <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"></td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr><td align="right"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
+                    <tr><td align="right"><a href="backstage_management"><input type="button" value="取消"></a></td><td align="center"><button type="submit">删除</button></td></tr>
                     </table>
              		</form>
              		</div>
