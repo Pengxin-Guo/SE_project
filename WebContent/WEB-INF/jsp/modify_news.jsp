@@ -194,13 +194,13 @@
 							<ul class="nav_01">
 								<li>&nbsp;<A href='index' class='navigation_style'>首页</a>&nbsp;&nbsp;&#8250;</li>
 								<li>&nbsp;<A href='backstage_management' class='navigation_style'>后台管理</a>&nbsp;&nbsp;&#8250;</li>
-								<li>&nbsp;<A href='add_news' class='navigation_style'>添加新闻</a></li>
+								<li>&nbsp;<A href='modify_news' class='navigation_style'>修改新闻</a></li>
 							</ul>
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> 
 						<!-- start -->
 						<div style="height: 50px"></div>						
-						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">添加新闻</h1>						
-					<form action="add_news_achieve" method="post">
+						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">修改新闻</h1>						
+					<form action="modify_news_achieve" method="post">
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
                     <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required"></td></tr>

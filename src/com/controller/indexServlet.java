@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.service.ShowNewsService;
+import com.service.NewsService;
+
 
 /**
  * Servlet implementation class indexServlet
@@ -15,10 +16,10 @@ import com.service.ShowNewsService;
 @WebServlet("/index")
 public class indexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private ShowNewsService showNewsService = new ShowNewsService();
+    private NewsService newsService = new NewsService();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    request.setAttribute("newss", showNewsService.listNews());
+	    request.setAttribute("newss", newsService.listNews());
 		request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
 	}
 }

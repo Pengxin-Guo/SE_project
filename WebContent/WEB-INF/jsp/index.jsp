@@ -234,14 +234,12 @@
 					<h3>
 						<span style="color: #000000;"> 专业动态 </span>
 					</h3>
-					<ul>
-					<c:forEach items="${newss }" var="news" varStatus="s" >
-    						<c:if test="${s.count < 6 }">
-    					    <li style="color: #000000;"><a href="GetUserServlet?uid=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a><label style="text-align: right;">${news.time }</label></li>
-    						</c:if>
-    				</c:forEach>
-						
-					</ul>
+					<table style="width: 240px;text-align: right;">
+						<c:forEach items="${newss }" var="news" varStatus="s" >
+    					    <tr style="align-content: center;"><td width="5px">&nbsp;</td><td align="left" width="150px"><li style="color: #000000;"><a href="news_detail?id=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a></li></td><td align="left"><label style="text-align: left;">${news.time }</label></td></tr>
+    					</c:forEach>
+					</table>
+					
 				</div>
 				<!-- 院系要闻结束 -->
 

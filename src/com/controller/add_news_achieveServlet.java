@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.entity.News;
-import com.service.AddNewsService;
+import com.service.NewsService;
 
 
 /**
@@ -17,7 +17,7 @@ import com.service.AddNewsService;
 @WebServlet("/add_news_achieve")
 public class add_news_achieveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private AddNewsService addnews = new AddNewsService();
+	private NewsService newsService = new NewsService();
 	private News news = new News();
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -31,7 +31,7 @@ public class add_news_achieveServlet extends HttpServlet {
 	    news.setTitle(title);
 	    news.setContent(content);
 	    news.setAuthor(author);
-	    addnews.addNews(news);
+	    newsService.addNews(news);
 	    
 		response.sendRedirect(request.getContextPath() + "/add_news");
 	}

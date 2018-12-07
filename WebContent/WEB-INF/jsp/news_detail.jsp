@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,6 +66,15 @@
 	type="text/css" />
 <!-- 导入全局模板 -->
 <script src="resources/js/global_index.js"></script>
+<style type="text/css">
+pre { 
+	white-space:pre-wrap; /* css3.0 */ 
+	white-space:-moz-pre-wrap; /* Firefox */ 
+	white-space:-pre-wrap; /* Opera 4-6 */ 
+	white-space:-o-pre-wrap; /* Opera 7 */ 
+	word-wrap:break-word; /* Internet Explorer 5.5+ */ 
+} 
+</style>
 </head>
 <body>
 	<!-- 整体区域开始 -->
@@ -153,21 +164,14 @@
 						<!-- start --> <!-- start -->
 						<div class="s_menu">
 							<h3>
-								<span>后台管理</span>
+								<span>新闻公告</span>
 							</h3>
 							<p>
 								<img src="resources/images/main_building.jpg" title=""
 									width="200" height="146" />
 							</p>
-							<div class="menu_box">
-								<ul>
-								<!-- 输出二级栏目信息-->
-								<li><a href="add_news" title="教授"><span>添加新闻</span></a></li>
-								<!-- 输出二级栏目信息-->
-								<li><a href="modify_news" title="副教授"><span>修改新闻</span></a></li>
-								<!-- 输出二级栏目信息-->
-								<li><a href="delete_news" title="讲师"><span>删除新闻</span></a></li>
-								</ul>
+							<div >
+								<p>&nbsp;</p>
 							</div>
 						</div> <!-- end --> <!-- end --> <!-- start -->
 						<div class="menu_bg_line"></div> <!-- end --> <!-- start -->
@@ -192,34 +196,22 @@
 						<!-- c_top start --> <!-- c_top start -->
 						<div class="c_top">
 							<ul class="nav_01">
-								<li>&nbsp;<A href='index' class='navigation_style'>首页</a>&nbsp;&nbsp;&#8250;</li>
-								<li>&nbsp;<A href='backstage_management' class='navigation_style'>后台管理</a>&nbsp;&nbsp;&#8250;</li>
-								<li>&nbsp;<A href='add_news' class='navigation_style'>添加新闻</a></li>
+								<li>&nbsp;<A href='index' class='navigation_style'>首页</a>&nbsp;&nbsp;&#8250;
+								</li>
+								<li><A href='news' class='navigation_style'>新闻公告&nbsp;&nbsp;&#8250;</a></li>
+							    <li>&nbsp;具体新闻</li>
 							</ul>
-						</div> <!-- c_bottom end --> <!-- c_bottom end --> 
-						<!-- start -->
-						<div style="height: 50px"></div>						
-						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">添加新闻</h1>						
-					<form action="add_news_achieve" method="post">
-                    <table style="margin: auto;margin-bottom: auto">
-                    <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required"></td></tr>
-					<tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="15" cols="42" required="required"></textarea></td></tr>
-                    <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"></td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;</td></tr>
-                    <tr><td align="right"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
-                    </table>
-             		</form>
-             		</div>
-             		<div style="height: 100px"></div>
-             		
+						</div> <!-- c_bottom end --> <!-- c_bottom end --> <!-- start -->
+				        <div class="box_detail" style="width: 750px;">
+              				<h2><span style="color:;">${news.title }</span></h2>
+              				<p align="right">发布时间：${news.time }&nbsp;&nbsp;&nbsp;</p>
+              				<div style="width: 670px;align-content: center;margin-left: 50px;margin-right: 50px"><p><pre>${news.content }</pre><p></div>
+             				<p style="TEXT-ALIGN: right">发布:软件工程专业 &nbsp;  原作者:${news.author }</p><p>&nbsp;</p>
+            			</div>
+						
 					</td>
 				</tr>
 			</table>
-			
 			<!-- end -->
 
 		</div>
