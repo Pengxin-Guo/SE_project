@@ -22,6 +22,7 @@
 		}
 		document.write(summaryStr);
 	}
+	
 	/*
 	 *jQuery:所有外域链接在新窗口打开
 	 */
