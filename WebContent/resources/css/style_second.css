@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 /* wrapper */
 .wrapper { width:960px; overflow:hidden; }
 
@@ -9,7 +9,7 @@
  
 /* logo_text */
 .logo_text { width:400px; float:left; left:500px; display:inline; color:#fff; top:44px; position:relative; z-index:99; }
-.logo_text .cn { font-family:ÃŽÂ¢ÃˆÃ­Ã‘Ã…ÂºÃš, ÂºÃšÃŒÃ¥, Ã‹ÃŽÃŒÃ¥; font-size:24px; font-weight:bold; margin-bottom:3px; }
+.logo_text .cn { font-family:Tahoma, Geneva, sans-serif; font-size:24px; font-weight:bold; margin-bottom:3px; }
 .logo_text .en { font-family:Tahoma, Geneva, sans-serif; font-size:12px; line-height:26px; text-transform:capitalize; }
  
 /* hot_links */
@@ -39,7 +39,7 @@
 .nav ul li:hover ul, 
 .nav ul a:hover ul{ visibility:visible; } 
 .nav ul ul li { clear:both; text-align:left; }   
-.nav ul ul li a{ display:block; overflow: hidden;-o-text-overflow: ellipsis;text-overflow:ellipsis;white-space: nowrap; width:90px; height:24px; line-height:24px; white-space:nowrap; color:#000; font-weight:normal; background:#FFF; border:none; filter:none; text-shadow:none; text-align:left; font-family:"Ã‹ÃŽÃŒÃ¥", "Ã“Ã—Ã”Â²"; border-bottom:#EEE 1px dotted;
+.nav ul ul li a{ display:block; overflow: hidden;-o-text-overflow: ellipsis;text-overflow:ellipsis;white-space: nowrap; width:90px; height:24px; line-height:24px; white-space:nowrap; color:#000; font-weight:normal; background:#FFF; border:none; filter:none; text-shadow:none; text-align:left; font-family:"脙鈥姑兣矫兣捗兟�", "脙鈥溍冣�斆冣�澝偮�"; border-bottom:#EEE 1px dotted;
  filter:alpha(opacity=75); /* IE */ 
  -moz-opacity:0.7; /* Moz + FF */
  opacity: 0.7; padding:0 20px;

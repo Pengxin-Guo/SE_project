@@ -207,9 +207,9 @@
 						<div class="box_detail"><h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 28px; font-weight: bold; border-bottom-style: solid;" label="标题居中">修改新闻</h1>						
 					
              		<table style="margin: 0 auto; text-align: center"; >
-								<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td width="60px"><strong>新闻序号</strong></td><td width="300px"><strong>新闻标题</strong></td><td width="80px"><strong>发布时间</strong></td><td width="50px"><strong>操作</strong></td></tr>
+								<tr height="20px"  style="border-bottom: 1px solid #ddd;"></td><td width="300px"><strong>新闻标题</strong></td><td width="60px"><strong>作者</strong><td width="80px"><strong>发布时间</strong></td><td width="50px"><strong>操作</strong></td></tr>
 								<c:forEach items="${newss }" var="news" varStatus="s" >
-    					    		<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td >${news.id }</td><td align="left">${news.title }</td><td >${news.time }</td><td><a href="modify_news_detail?id=${news.id }" style="display: inline-block;text-decoration: none;border-radius: 8px;color: green;">修改</a></td></tr>
+    					    		<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td align="left">${news.title }</td><td >${news.author }</td><td >${news.time }</td><td><a href="modify_news_detail?id=${news.id }" style="display: inline-block;text-decoration: none;border-radius: 8px;color: green;">修改</a></td></tr>
     							</c:forEach>
 							</table>
              		</div>
