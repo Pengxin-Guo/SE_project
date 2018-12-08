@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -153,13 +155,15 @@
 						<!-- start --> <!-- start -->
 						<div class="s_menu">
 							<h3>
-								<span>师资状况</span>
+								<span>新闻公告</span>
 							</h3>
 							<p>
 								<img src="resources/images/main_building.jpg" title=""
 									width="200" height="146" />
 							</p>
-							
+							<div >
+								<p>&nbsp;</p>
+							</div>
 						</div> <!-- end --> <!-- end --> <!-- start -->
 						<div class="menu_bg_line"></div> <!-- end --> <!-- start -->
 						<form id="searchForm" name="form1" method="get" action="search" >
@@ -172,7 +176,7 @@
 								<a href="javascript:document.form1.submit();" title="搜索"></a>
 								</p> 	
 							</div>
-						</form>
+						</form> 
 						<!-- end --> <!-- start --> <!-- start -->
 						 <!-- end --> <!-- end -->
 
@@ -181,36 +185,24 @@
 						<!-- c_top start --> <!-- c_top start -->
 						<div class="c_top">
 							<ul class="nav_01">
-								<li>&nbsp;<A href='index' class='navigation_style'>首页</a>&nbsp;&nbsp;&#8250;</li>
-								<li><A href='teachers' class='navigation_style'>师资状况</a>&nbsp;&nbsp;&#8250;</li>
-								<li><A href='professor' class='navigation_style'>教授</a>&nbsp;&nbsp;&#8250;</li>
-							    <li><A href='sujianmin' class='navigation_style'>苏建民</a></li>
+								<li>&nbsp;<A href='index' class='navigation_style'>首页</a>&nbsp;&nbsp;&#8250;
+								</li>
+								<li><A href='news' class='navigation_style'>新闻公告</a></li>
 							</ul>
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> <!-- start -->
-				        <p>&nbsp;</p>
-				        <table width="576" align="center" border="0" cellspacing="0" cellpadding="0" uetable="null">
-				        <tbody>
-				       <tr>
-                      <td align="center"><span class="menu_title"><span style="font-size:18px">苏健民</span>&nbsp;&nbsp;教授&nbsp;&nbsp;&nbsp;&nbsp;相关介绍</span></td>
-                    </tr>
-                    <tr>
-                      <td style="padding-top:10px"><p>
-                          <p align=center><img class=thumbImage2 border='0' src='resources/images/sujianmin.jpg'></p>
-                        </p>
-                        <p><P><!--StartFragment-->
-						<P class=p style="BACKGROUND: rgb(255,255,255); WORD-BREAK: break-all; TEXT-ALIGN: justify; MARGIN: 0pt; TEXT-JUSTIFY: inter-ideograph; LINE-HEIGHT: 24pt; TEXT-INDENT: 21pt; mso-pagination: widow-orphan" align=justify><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; BACKGROUND: rgb(255,255,255); COLOR: rgb(0,0,0); mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-font-kerning: 0.0000pt; mso-bidi-font-family: 'Times New Roman'; mso-spacerun: 'yes'; mso-shading: rgb(255,255,255)"><SPAN style='FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: "Songti SC Regular"; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast'>苏健民，教授，硕士，硕士生导师，软件工程一级学科带头人，省计算机学会嵌入式专委会委员。主要研究方向：自动控制、信号与信息处理。主持或参加科研、教学项目11项，科研与教学获奖11项，出版教材2部，发表论文32篇。 <BR>&nbsp;&nbsp; <STRONG>所在学科：</STRONG>软件工程 软件工程（专业学位） <BR>&nbsp;&nbsp; <STRONG>Email：</STRONG><A href="mailto:1216649568@qq.com">1216649568@qq.com</A> </SPAN></SPAN></P></p>
-                        <p align="right">2018年12月4日</p>
-				        </tbody>
-				        </table>
-				        <p>&nbsp;</p>
-				        
+				        <div class="box_detail">
+				        	<h1 style="text-align: center;"><span style="font-size: 22px;"><span style="font-family: 黑体;">查询结果</span></span></h1>
+				        	<p style="text-align: center;">&nbsp;</p>
+				        	<table style="width: 600px;text-align: right;" >
+								<c:forEach items="${newss }" var="news" varStatus="s" >
+    					    		<tr style="align-content: center;"><td width="100px">&nbsp;</td><td align="left" width="400px"><li style="color: #000000;"><a href="news_detail?id=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a></li></td><td align="right"><label style="text-align: right;">${news.time }</label></td></tr>
+    							</c:forEach>
+							</table>
 				        </div>
-
 						
 					</td>
 				</tr>
 			</table>
-			
 			<!-- end -->
 
 		</div>

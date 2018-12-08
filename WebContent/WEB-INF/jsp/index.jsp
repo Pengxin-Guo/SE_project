@@ -155,17 +155,15 @@
 				</div>
 				<!-- 快速链接区域结束 -->
 				<!-- 搜索区域开始 -->
-				<form id="searchForm" name="form1" method="post" action="#" target="_blank">
+				<form id="searchForm" name="form1" method="get" action="search" >
 					<input type="hidden" id="searchVpath" name="vpath" value="" />
 					<div class="search auto">
 						<p class="left">
-							<input name="Q" type="text" />
+							<input name="search" type="text" />
 						</p>
-						<!--  用于实现搜索功能
 						<p class="right">
 							<a href="javascript:document.form1.submit();" title="搜索"></a>
 						</p> 
-						 -->
 						
 					</div>
 				</form>

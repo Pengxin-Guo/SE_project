@@ -111,4 +111,28 @@ public class NewsService {
 			logger.warning(e.getMessage());
 		}
 	}
+	
+	// 显示搜索新闻
+		public List<News> searchNews(String key) {
+			// TODO Auto-generated method stub
+			List<News> newss = new ArrayList<>();
+		    String sql = "SELECT * FROM News WHERE title LIKE '%" + key + "%'" + "or content LIKE '%" + key + "%'";
+			try (Connection conn = DataSourceUtils.getConnection();
+					PreparedStatement st = conn.prepareStatement(sql);
+					ResultSet rs = st.executeQuery()) {
+				while (rs.next()) {
+					News news = new News();
+					news.setId(rs.getInt("id"));
+					news.setTitle(rs.getString("title"));
+					news.setContent(rs.getString("content"));
+					news.setAuthor(rs.getString("author"));
+					news.setTime(rs.getDate("time"));
+					newss.add(news);
+				}
+			} catch (SQLException e) {
+				// TODO: handle exception
+				logger.warning(e.getMessage());
+			}
+		return newss;
+	}
 }
