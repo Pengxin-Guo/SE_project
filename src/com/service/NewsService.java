@@ -116,7 +116,7 @@ public class NewsService {
 		public List<News> searchNews(String key) {
 			// TODO Auto-generated method stub
 			List<News> newss = new ArrayList<>();
-		    String sql = "SELECT * FROM News WHERE title LIKE '%" + key + "%'" + "or content LIKE '%" + key + "%'";
+		    String sql = "SELECT * FROM news WHERE title LIKE '%" + key + "%' or content LIKE '%" + key + "%'";
 			try (Connection conn = DataSourceUtils.getConnection();
 					PreparedStatement st = conn.prepareStatement(sql);
 					ResultSet rs = st.executeQuery()) {
