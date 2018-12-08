@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
 import com.entity.User;
 import com.service.UserService;
 
+import javafx.scene.control.Alert;
+
 /**
  * Servlet implementation class modifyServlet
  */
@@ -42,9 +44,13 @@ public class modifyServlet extends HttpServlet {
 			s1.setAttribute("key", "1");
 			response.sendRedirect("modify");
 	    } else {
-			JOptionPane.showMessageDialog(null, "用户名或密码错误，请重新输入！"); 
+	    	request.setCharacterEncoding("utf-8");
+			response.setCharacterEncoding("utf-8");
+			response.setContentType("text/html; charset=utf-8");
+	    	response.getWriter().write("<h3 style='color:red'>用户名或密码错误！请重新登录</h3>");
+	    	response.setHeader("refresh", "3;url=modify");
 			s1.setAttribute("key", "2");
-			response.sendRedirect("backstage_management");
+			//response.sendRedirect("backstage_management");
 	    }
 	}
 }

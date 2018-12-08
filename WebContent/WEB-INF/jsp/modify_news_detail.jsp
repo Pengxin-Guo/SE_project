@@ -205,14 +205,14 @@
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
                     <tr style="display: none"><td>新闻序号：</td><td><input name="id" type="text" size="40" required="required" value="${news.id }"></td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required" value="${news.title }"></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required" value="${news.title }" maxlength="100"></td></tr>
 					<tr><td>&nbsp;</td></tr>
                     <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="15" cols="42" required="required" placeholder="${news.content }">${news.content }</textarea></td></tr>
                     <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"  value="${news.author }"></td></tr>
+                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"  value="${news.author }" maxlength="20"></td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr><td align="right"><a href="modify_news"><input type="button" value="取消"></a></td><td align="center"><button type="submit">修改</button></td></tr>
+                    <tr><td align="right"><a href="modify_news"><input type="button" value="取消"></a></td><td align="center"><button type="submit" onclick="javascript:alert('添加成功！');">修改</button></td></tr>
                     </table>
              		</form>
              		</div>

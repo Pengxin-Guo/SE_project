@@ -17,6 +17,7 @@
 	 *lengTh:int 截取的长度
 	 */
 	function cutSummary(summaryStr, lengTh) {
+		 
 		if (summaryStr.length > lengTh) {
 			summaryStr = summaryStr.substring(0, lengTh) + "...";
 		}
@@ -203,14 +204,14 @@
 					<form action="add_news_achieve" method="post">
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required"></td></tr>
+                    <tr style="align-content: center;"><td align="center">新闻标题：</td><td><input name="title" type="text" size="40" required="required" maxlength="100"></td></tr>
 					<tr><td>&nbsp;</td></tr>
                     <tr style="align-content: center;"><td align="center">新闻内容：</td><td><textarea name="content" rows="15" cols="42" required="required"></textarea></td></tr>
                     <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"></td></tr>
+                    <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required" maxlength="20"></td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr><td align="right"><a href="backstage_management"><input type="button" value="取消"></a></td><td align="center"><button type="submit">添加</button></td></tr>
+                    <tr><td align="right"><a href="backstage_management"><input type="button" value="取消"></a></td><td align="center"><button type="submit" onclick="javascript:alert('添加成功！');">添加</button></td></tr>
                     </table>
              		</form>
              		</div>

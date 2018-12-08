@@ -205,7 +205,7 @@
 							<table style="margin: 0 auto; text-align: center"; >
 								<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td width="60px"><strong>新闻序号</strong></td><td width="300px"><strong>新闻标题</strong></td><td width="80px"><strong>发布时间</strong></td><td width="50px"><strong>操作</strong></td></tr>
 								<c:forEach items="${newss }" var="news" varStatus="s" >
-    					    		<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td >${news.id }</td><td align="left">${news.title }</td><td >${news.time }</td><td><a href="delete_news_achieve?id=${news.id }" style="display: inline-block;text-decoration: none;border-radius: 8px;color: red;">删除</a></td></tr>
+    					    		<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td >${news.id }</td><td align="left">${news.title }</td><td >${news.time }</td><td><a href="delete_news_achieve?id=${news.id }" style="display: inline-block;text-decoration: none;border-radius: 8px;color: red;" onclick="javascript:alert('删除成功！');">删除</a></td></tr>
     							</c:forEach>
 							</table>
 							

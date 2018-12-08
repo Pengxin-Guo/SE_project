@@ -10,10 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.swing.JOptionPane;
-
 import com.entity.News;
-import com.entity.User;
 import com.util.DataSourceUtils;
 
 public class NewsService {
@@ -30,11 +27,9 @@ public class NewsService {
 			st.setString(3, news.getAuthor());
 			st.setString(4, df.format(new Date()));
 			st.executeUpdate();
-			JOptionPane.showMessageDialog(null, "添加新闻成功！");
 
 		} catch (SQLException e) {
 			// TODO: handle exception
-			JOptionPane.showMessageDialog(null, "添加新闻失败：" + e.getMessage() + "!");
 			logger.warning(e.getMessage());
 		}
 	}
@@ -74,10 +69,8 @@ public class NewsService {
 			st.setString(4, df.format(new Date()));
 			st.setInt(5, news.getId());
 			st.executeUpdate();
-			JOptionPane.showMessageDialog(null, "更新新闻成功！");
 		} catch (SQLException e) {
 			// TODO: handle exception
-			JOptionPane.showMessageDialog(null, "更新新闻失败：" + e.getMessage() + "!");
 			logger.warning(e.getMessage());
 		}
 	}
@@ -113,10 +106,8 @@ public class NewsService {
 		try (Connection conn = DataSourceUtils.getConnection(); PreparedStatement st = conn.prepareStatement(sql)) {
 			st.setInt(1, id);
 			st.executeUpdate();
-			JOptionPane.showMessageDialog(null, "删除新闻成功！");
 		} catch (SQLException e) {
 			// TODO: handle exception
-			JOptionPane.showMessageDialog(null, "删除新闻失败：" + e.getMessage() + "!");
 			logger.warning(e.getMessage());
 		}
 	}
