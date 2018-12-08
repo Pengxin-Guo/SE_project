@@ -38,7 +38,7 @@ public class NewsService {
 	public List<News> listNews() {
 		// TODO Auto-generated method stub
 		List<News> newss = new ArrayList<>();
-		String sql = "SELECT * FROM news order by id desc";
+		String sql = "SELECT * FROM news order by time desc";
 		try (Connection conn = DataSourceUtils.getConnection();
 				PreparedStatement st = conn.prepareStatement(sql);
 				ResultSet rs = st.executeQuery()) {
