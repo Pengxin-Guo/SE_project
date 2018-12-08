@@ -195,9 +195,9 @@
 					<form action="modify" method="post">
                     <table style="margin: auto;margin-bottom: auto">
                     <tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">用户名：</td><td><input name="name" type="text"></td></tr>
+                    <tr style="align-content: center;"><td align="center">用户名：</td><td><input name="name" type="text" required="required"></td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr style="align-content: center;"><td align="center">密码：</td><td><input name="password" type="password"></td></tr>
+                    <tr style="align-content: center;"><td align="center">密码：</td><td><input name="password" type="password" required="required"></td></tr>
                     <tr><td>&nbsp;</td></tr>
                     <tr><td>&nbsp;</td></tr>
                     <tr><td align="center"><a href="index"><input type="button" value="取消"></a></td><td align="center"><button type="submit">登录</button></td></tr>

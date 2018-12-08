@@ -66,6 +66,8 @@
 	type="text/css" />
 <!-- 导入全局模板 -->
 <script src="resources/js/global_index.js"></script>
+
+
 </head>
 <body>
 	<!-- 整体区域开始 -->
@@ -205,7 +207,7 @@
 							<table style="margin: 0 auto; text-align: center"; >
 								<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td width="300px"><strong>新闻标题</strong></td><td width="60px"><strong>作者</strong></td><td width="80px"><strong>发布时间</strong></td><td width="50px"><strong>操作</strong></td></tr>
 								<c:forEach items="${newss }" var="news" varStatus="s" >
-    					    		<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td align="left">${news.title }</td><td >${news.author }</td><td >${news.time }</td><td><a href="delete_news_achieve?id=${news.id }" style="display: inline-block;text-decoration: none;border-radius: 8px;color: red;" onclick="javascript:alert('删除成功！');">删除</a></td></tr>
+    					    		<tr height="20px"  style="border-bottom: 1px solid #ddd;"><td align="left">${news.title }</td><td >${news.author }</td><td >${news.time }</td><td><a id="confirm" href="delete_news_achieve?id=${news.id }" style="display: inline-block;text-decoration: none;border-radius: 8px;color: red;" >删除</a></td></tr>
     							</c:forEach>
 							</table>
 							
@@ -228,5 +230,21 @@
 		<!-- 页脚区域结束 -->
 	</div>
 	<!-- 整体区域结束 -->
+<script>
+window.onload=function()
+{
+  var zx=document.getElementById("confirm");
+  zx.onclick=function()
+  {
+     if(confirm("确定要删除吗?"))
+     {
+       alert("删除成功！");
+       return true;
+     }else{
+	   return false;
+	 }
+  }
+}
+</script>
 </body>
 </html>

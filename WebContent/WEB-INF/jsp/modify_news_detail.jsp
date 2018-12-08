@@ -212,7 +212,7 @@
                     <tr style="align-content: center;"><td align="center">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</td><td><input name="author" type="text" size="40" required="required"  value="${news.author }" maxlength="20"></td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td></tr>
-                    <tr><td align="right"><a href="modify_news"><input type="button" value="取消"></a></td><td align="center"><button type="submit" onclick="javascript:alert('修改成功！');">修改</button></td></tr>
+                    <tr><td align="right"><a href="modify_news"><input type="button" value="取消"></a></td><td align="center"><button id="confirm" type="submit" >修改</button></td></tr>
                     </table>
              		</form>
              		</div>
@@ -235,5 +235,21 @@
 		<!-- 页脚区域结束 -->
 	</div>
 	<!-- 整体区域结束 -->
+<script>
+window.onload=function()
+{
+  var zx=document.getElementById("confirm");
+  zx.onclick=function()
+  {
+     if(confirm("确定要修改吗?"))
+     {
+       alert("修改成功！");
+       return true;
+     }else{
+	   return false;
+	 }
+  }
+}
+</script>
 </body>
 </html>
