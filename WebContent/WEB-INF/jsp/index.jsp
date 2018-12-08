@@ -236,7 +236,9 @@
 					</h3>
 					<table style="width: 240px;text-align: right;">
 						<c:forEach items="${newss }" var="news" varStatus="s" >
+							<c:if test="${s.count <6 }">
     					    <tr style="align-content: center;"><td width="5px">&nbsp;</td><td align="left" width="150px"><li style="color: #000000;"><a href="news_detail?id=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a></li></td><td align="left"><label style="text-align: left;">${news.time }</label></td></tr>
+    						</c:if>
     					</c:forEach>
 					</table>
 					
