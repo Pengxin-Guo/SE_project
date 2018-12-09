@@ -232,10 +232,10 @@
 					<h3>
 						<span style="color: #000000;"> 专业动态 </span>
 					</h3>
-					<table style="width: 240px;text-align: right;">
+					<table style="width: 240px;text-align: right;" >
 						<c:forEach items="${newss }" var="news" varStatus="s" >
 							<c:if test="${s.count <6 }">
-    					    <tr style="align-content: center;"><td width="5px">&nbsp;</td><td align="left" width="150px"><li style="color: #000000;"><a href="news_detail?id=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a></li></td><td align="left"><label style="text-align: left;">${news.time }</label></td></tr>
+    					    <tr style="align-content: center;" height="20px"><td width="5px" valign="top"><img src="resources/images/list_icon0102.png"></img></td><td align="left" width="145px" valign="top"><li style="color: #000000;list-style: none"><a href="news_detail?id=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a></li></td><td align="left" ><label style="text-align: left;">${news.time }</label></td></tr>
     						</c:if>
     					</c:forEach>
 					</table>
