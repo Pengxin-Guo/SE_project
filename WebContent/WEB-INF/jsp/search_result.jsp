@@ -190,15 +190,16 @@
 								<li><A href='news' class='navigation_style'>新闻公告</a></li>
 							</ul>
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> <!-- start -->
-				        <div class="box_detail">
-				        	<h1 style="text-align: center;"><span style="font-size: 22px;"><span style="font-family: 黑体;">查询结果</span></span></h1>
+				      <div class="box_detail">
+				        	<h1 style="text-align: center;"><span style="font-size: 22px;"><span style="font-family: 黑体;">新闻列表</span></span></h1>
 				        	<p style="text-align: center;">&nbsp;</p>
 				        	<table style="width: 600px;text-align: right; margin: 0 auto" >
 								<c:forEach items="${newss }" var="news" varStatus="s" >
-    					    		<tr style="align-content: center;" height="20px"><td width="100px"><img src="resources/images/list_icon0102.png"></img>&nbsp;</td></td><td align="left" width="400px"><li style="color: #000000; list-style: none" ><a href="news_detail?id=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a></li></td><td align="right"><label style="text-align: right;">${news.time }</label></td></tr>
+    					    		<tr style="align-content: center;" height="20px"><td width="50px"><img src="resources/images/list_icon0102.png"></img>&nbsp;</td></td><td align="left" width="400px"><li style="color: #000000; list-style: none" ><a href="news_detail?id=${news.id }" title="${news.title }" style="color: #000000;display: inline">${news.title } </a></li></td><td align="right"><label style="text-align: right;">${news.time }</label></td></tr>
     							</c:forEach>
 							</table>
 				        </div>
+						<p><br></p>
 						
 					</td>
 				</tr>
