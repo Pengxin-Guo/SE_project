@@ -191,7 +191,7 @@
 							</ul>
 						</div> <!-- c_bottom end --> <!-- c_bottom end --> <!-- start -->
 				      <div class="box_detail">
-				        	<h1 style="text-align: center;"><span style="font-size: 22px;"><span style="font-family: 黑体;">新闻列表</span></span></h1>
+				        	<h1 style="text-align: center;"><span style="font-size: 22px;"><span style="font-family: 黑体;">搜索结果</span></span></h1>
 				        	<p style="text-align: center;">&nbsp;</p>
 				        	<table style="width: 600px;text-align: right; margin: 0 auto" >
 								<c:forEach items="${newss }" var="news" varStatus="s" >
